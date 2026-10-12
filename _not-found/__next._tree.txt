@@ -1,4 +1,4 @@
-:HL["/ptypeai/_next/static/chunks/0suzt5ei6cdn5.css","style"]
+:HL["/ptypeai/_next/static/chunks/2esvnb6-aqbb-.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"DKSAMUI7unoS1zKq9nB3h","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"-SiSjqLK1B-jBwOR_bDmy","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
