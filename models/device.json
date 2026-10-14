@@ -1,34 +1,50 @@
 {
-  "case": {
-    "verts": 8066,
-    "tris": 16128
+  "parts": {
+    "case": {
+      "verts": 11362,
+      "tris": 22720
+    },
+    "bezel": {
+      "verts": 106,
+      "tris": 208
+    },
+    "screen": {
+      "verts": 106,
+      "tris": 208
+    },
+    "ports": {
+      "verts": 212,
+      "tris": 416
+    }
   },
-  "screen": {
-    "verts": 106,
-    "tris": 208
-  },
-  "button": {
-    "verts": 130,
-    "tris": 256
+  "bezelTransform": {
+    "y": 0.0,
+    "z": 6.05
   },
   "screenTransform": {
     "y": 0.0,
-    "z": 6.25
+    "z": 6.75
   },
-  "buttonTransform": {
-    "y": -18.0,
-    "z": 1.3
+  "portsTransform": {
+    "x": 41.75,
+    "y": 8.0,
+    "z": 0.0
+  },
+  "size": {
+    "w": 86.5,
+    "h": 86.5,
+    "d": 13.5
   },
   "bbox": {
     "min": [
       -43.25,
       -43.25,
-      -7.01
+      -6.76
     ],
     "max": [
       43.25,
       43.25,
-      7.01
+      6.76
     ]
   }
 }
