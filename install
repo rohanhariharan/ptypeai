@@ -6,7 +6,7 @@
 #
 set -eu
 
-REPO="rohanhariharan/ptype"
+REPO="rohanhariharan/ptype-releases"
 APP="ptype.app"
 DEST="/Applications"
 
