@@ -1,0 +1,53 @@
+#!/bin/sh
+# ptype installer — downloads the latest macOS build, installs it to /Applications,
+# and clears the Gatekeeper quarantine flag so it opens with no warning.
+#
+#   curl -fsSL https://ptype.app/install | sh
+#
+set -eu
+
+REPO="rohanhariharan/ptype"
+APP="ptype.app"
+DEST="/Applications"
+
+if [ "$(uname -s)" != "Darwin" ]; then
+  echo "ptype: this installer is for macOS."
+  echo "Other builds: https://github.com/${REPO}/releases"
+  exit 1
+fi
+
+echo "ptype — finding the latest release…"
+url=$(curl -fsSL "https://api.github.com/repos/${REPO}/releases/latest" \
+  | grep -o '"browser_download_url": *"[^"]*\.dmg"' \
+  | head -1 | sed 's/.*"\(https[^"]*\)"/\1/')
+
+if [ -z "${url:-}" ]; then
+  echo "ptype: no .dmg found in the latest release — see https://github.com/${REPO}/releases"
+  exit 1
+fi
+
+tmp="$(mktemp -d)"
+trap 'rm -rf "$tmp"' EXIT
+dmg="$tmp/ptype.dmg"
+
+echo "ptype — downloading $(basename "$url")…"
+curl -#fL "$url" -o "$dmg"
+
+echo "ptype — mounting…"
+mnt="$(hdiutil attach -nobrowse -readonly "$dmg" | grep -o '/Volumes/.*' | head -1)"
+cleanup() { hdiutil detach "$mnt" >/dev/null 2>&1 || true; }
+trap 'cleanup; rm -rf "$tmp"' EXIT
+
+echo "ptype — installing to ${DEST}…"
+rm -rf "${DEST:?}/${APP}"
+cp -R "${mnt}/${APP}" "${DEST}/"
+
+# No Apple Developer account: strip the quarantine flag and ad-hoc sign so it
+# launches without a "cannot be opened" / "unidentified developer" dialog.
+xattr -dr com.apple.quarantine "${DEST}/${APP}" 2>/dev/null || true
+codesign --force --deep --sign - "${DEST}/${APP}" >/dev/null 2>&1 || true
+
+echo "ptype — installed. Launching…"
+open "${DEST}/${APP}"
+echo
+echo "Done. ptype needs a model provider — Ollama by default: https://ollama.com"
