@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 640" width="1240" height="640" role="img" aria-label="The ptype Overview screen, annotated">
+  <defs>
+    <clipPath id="shot">
+      <rect x="250" y="150" width="740" height="405" rx="12" />
+    </clipPath>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity="0.18" />
+    </filter>
+    <style>
+      .t { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+      .label { font-size: 13px; font-weight: 600; fill: #000; }
+      .desc { font-size: 12.5px; fill: #4a4a4a; }
+      .line { stroke: #000; stroke-opacity: 0.38; stroke-width: 1.2; }
+      .dot { fill: #000; }
+      .head { font-family: "Cormorant", Georgia, serif; font-weight: 300; fill: #000; }
+    </style>
+  </defs>
+
+  <rect width="1240" height="640" fill="#f7f5ef" />
+
+  <text class="head" x="60" y="66" font-size="42">Overview</text>
+  <text class="t desc" x="60" y="94" font-size="14">One screen for your whole workspace.</text>
+
+  <!-- the app -->
+  <g filter="url(#soft)">
+    <image href="overview.png" x="250" y="150" width="740" height="405" preserveAspectRatio="xMidYMid slice" clip-path="url(#shot)" />
+  </g>
+  <rect x="250" y="150" width="740" height="405" rx="12" fill="none" stroke="#000" stroke-opacity="0.12" />
+
+  <!-- leader lines -->
+  <g class="line">
+    <line x1="405" y1="126" x2="405" y2="190" />
+    <line x1="618" y1="126" x2="618" y2="190" />
+    <line x1="837" y1="126" x2="837" y2="190" />
+    <line x1="232" y1="271" x2="300" y2="271" />
+    <line x1="1000" y1="271" x2="968" y2="271" />
+  </g>
+  <g class="dot">
+    <circle cx="405" cy="190" r="3.5" />
+    <circle cx="618" cy="190" r="3.5" />
+    <circle cx="837" cy="190" r="3.5" />
+    <circle cx="300" cy="271" r="3.5" />
+    <circle cx="968" cy="271" r="3.5" />
+  </g>
+
+  <!-- top labels -->
+  <text class="t label" x="405" y="112" text-anchor="middle">Projects you're running</text>
+  <text class="t label" x="618" y="112" text-anchor="middle">Live progress across tasks</text>
+  <text class="t label" x="837" y="112" text-anchor="middle">Every change, one axis</text>
+
+  <!-- left label -->
+  <text class="t label" x="60" y="246">The sidebar</text>
+  <text class="t desc" x="60" y="265">Projects, requests, agents,</text>
+  <text class="t desc" x="60" y="282">models — one place.</text>
+
+  <!-- right label -->
+  <text class="t label" x="1005" y="266">Projects &amp; progress</text>
+  <text class="t desc" x="1005" y="285">Each project, and how far along.</text>
+</svg>
