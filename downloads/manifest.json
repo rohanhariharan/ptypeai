@@ -1,14 +1,48 @@
 {
-  "latest": "v0.2.3.1",
-  "version": "0.2.3",
-  "published": "2026-10-16T18:28:44Z",
-  "macos_arm64": "/downloads/v0.2.3.1/ptype_0.2.3_aarch64.dmg",
-  "macos_x64": "/downloads/v0.2.3.1/ptype_0.2.3_x64.dmg",
-  "windows_x64": "/downloads/v0.2.3.1/ptype_0.2.3_x64-setup.exe",
+  "latest": "v0.2.4",
+  "version": "0.2.4",
+  "published": "2026-10-17T14:47:43.921Z",
+  "macos_arm64": "/downloads/v0.2.4/ptype_0.2.4_aarch64.dmg",
+  "macos_x64": "/downloads/v0.2.4/ptype_0.2.4_x64.dmg",
+  "windows_x64": "/downloads/v0.2.4/ptype_0.2.4_x64-setup.exe",
   "releases": [
     {
+      "tag": "v0.2.4",
+      "date": "2026-10-17T14:47:43.921Z",
+      "assets": [
+        {
+          "name": "ptype_0.2.4_aarch64.dmg",
+          "os": "macOS",
+          "arch": "Apple silicon",
+          "size": 34934543,
+          "url": "/downloads/v0.2.4/ptype_0.2.4_aarch64.dmg"
+        },
+        {
+          "name": "ptype_0.2.4_x64.dmg",
+          "os": "macOS",
+          "arch": "Intel",
+          "size": 35123084,
+          "url": "/downloads/v0.2.4/ptype_0.2.4_x64.dmg"
+        },
+        {
+          "name": "ptype_0.2.4_x64-setup.exe",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 21082156,
+          "url": "/downloads/v0.2.4/ptype_0.2.4_x64-setup.exe"
+        },
+        {
+          "name": "ptype_0.2.4_x64_en-US.msi",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 30842880,
+          "url": "/downloads/v0.2.4/ptype_0.2.4_x64_en-US.msi"
+        }
+      ]
+    },
+    {
       "tag": "v0.2.3.1",
-      "date": "2026-10-16T18:28:44Z",
+      "date": "2026-10-17T01:34:11.071Z",
       "assets": [
         {
           "name": "ptype_0.2.3_aarch64.dmg",
