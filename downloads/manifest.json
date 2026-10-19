@@ -1,14 +1,14 @@
 {
   "latest": "v1.0.0",
   "version": "1.0.0",
-  "published": "2026-10-19T00:51:10.596Z",
+  "published": "2026-10-19T01:11:03.470Z",
   "macos_arm64": "/downloads/v1.0.0/ptype_1.0.0_aarch64.dmg",
   "macos_x64": "/downloads/v1.0.0/ptype_1.0.0_x64.dmg",
   "windows_x64": "/downloads/v1.0.0/ptype_1.0.0_x64-setup.exe",
   "releases": [
     {
       "tag": "v1.0.0",
-      "date": "2026-10-19T00:51:10.596Z",
+      "date": "2026-10-19T01:11:03.470Z",
       "assets": [
         {
           "name": "ptype_1.0.0_aarch64.dmg",
@@ -42,7 +42,7 @@
     },
     {
       "tag": "v0.2.4",
-      "date": "2026-10-19T00:51:10.420Z",
+      "date": "2026-10-19T01:11:03.329Z",
       "assets": [
         {
           "name": "ptype_0.2.4_aarch64.dmg",
@@ -76,7 +76,7 @@
     },
     {
       "tag": "v0.2.3.1",
-      "date": "2026-10-19T00:51:10.225Z",
+      "date": "2026-10-19T01:11:03.215Z",
       "assets": [
         {
           "name": "ptype_0.2.3_aarch64.dmg",
