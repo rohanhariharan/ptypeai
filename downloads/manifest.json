@@ -1,14 +1,48 @@
 {
-  "latest": "v1.0.0",
-  "version": "1.0.0",
-  "published": "2026-10-19T20:59:58.194Z",
-  "macos_arm64": "/downloads/v1.0.0/ptype_1.0.0_aarch64.dmg",
-  "macos_x64": "/downloads/v1.0.0/ptype_1.0.0_x64.dmg",
-  "windows_x64": "/downloads/v1.0.0/ptype_1.0.0_x64-setup.exe",
+  "latest": "v1.0.1",
+  "version": "1.0.1",
+  "published": "2026-10-20T18:47:04.771Z",
+  "macos_arm64": "/downloads/v1.0.1/Motif_1.0.1_aarch64.dmg",
+  "macos_x64": "/downloads/v1.0.1/Motif_1.0.1_x64.dmg",
+  "windows_x64": "/downloads/v1.0.1/Motif_1.0.1_x64-setup.exe",
   "releases": [
     {
+      "tag": "v1.0.1",
+      "date": "2026-10-20T18:47:04.771Z",
+      "assets": [
+        {
+          "name": "Motif_1.0.1_aarch64.dmg",
+          "os": "macOS",
+          "arch": "Apple silicon",
+          "size": 34660828,
+          "url": "/downloads/v1.0.1/Motif_1.0.1_aarch64.dmg"
+        },
+        {
+          "name": "Motif_1.0.1_x64.dmg",
+          "os": "macOS",
+          "arch": "Intel",
+          "size": 34840257,
+          "url": "/downloads/v1.0.1/Motif_1.0.1_x64.dmg"
+        },
+        {
+          "name": "Motif_1.0.1_x64-setup.exe",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 21117567,
+          "url": "/downloads/v1.0.1/Motif_1.0.1_x64-setup.exe"
+        },
+        {
+          "name": "Motif_1.0.1_x64_en-US.msi",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 30875648,
+          "url": "/downloads/v1.0.1/Motif_1.0.1_x64_en-US.msi"
+        }
+      ]
+    },
+    {
       "tag": "v1.0.0",
-      "date": "2026-10-19T20:59:58.194Z",
+      "date": "2026-10-20T18:47:04.656Z",
       "assets": [
         {
           "name": "ptype_1.0.0_aarch64.dmg",
@@ -42,7 +76,7 @@
     },
     {
       "tag": "v0.2.4",
-      "date": "2026-10-19T20:59:58.045Z",
+      "date": "2026-10-20T18:47:04.438Z",
       "assets": [
         {
           "name": "ptype_0.2.4_aarch64.dmg",
@@ -76,7 +110,7 @@
     },
     {
       "tag": "v0.2.3.1",
-      "date": "2026-10-19T20:59:57.926Z",
+      "date": "2026-10-20T18:47:04.258Z",
       "assets": [
         {
           "name": "ptype_0.2.3_aarch64.dmg",
