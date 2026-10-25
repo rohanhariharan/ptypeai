@@ -1,11 +1,24 @@
 {
-  "latest": "v1.0.1",
-  "version": "1.0.1",
-  "published": "2026-10-20T18:47:04.771Z",
-  "macos_arm64": "/downloads/v1.0.1/Motif_1.0.1_aarch64.dmg",
+  "latest": "v1.1.0",
+  "version": "1.1.0",
+  "published": "2026-10-25T03:25:21Z",
+  "macos_arm64": "/downloads/v1.1.0/Motif_1.1.0_aarch64.dmg",
   "macos_x64": "/downloads/v1.0.1/Motif_1.0.1_x64.dmg",
   "windows_x64": "/downloads/v1.0.1/Motif_1.0.1_x64-setup.exe",
   "releases": [
+    {
+      "tag": "v1.1.0",
+      "date": "2026-10-25T03:25:21Z",
+      "assets": [
+        {
+          "name": "Motif_1.1.0_aarch64.dmg",
+          "os": "macOS",
+          "arch": "Apple silicon",
+          "size": 42821780,
+          "url": "/downloads/v1.1.0/Motif_1.1.0_aarch64.dmg"
+        }
+      ]
+    },
     {
       "tag": "v1.0.1",
       "date": "2026-10-20T18:47:04.771Z",
