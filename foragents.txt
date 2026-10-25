@@ -107,7 +107,7 @@ definition, references, symbols, hover, remember, test, finish.
 - Reply mode "research" for academic sources, evidence-backed answers, or source gathering.
 - Tools: academic_search, web_search, search_workspace, read_file, list_dir, research_write.
 - Work-changing tools and finish are blocked; prose is suppressed.
-- research_write is the only final deliverable: it writes one .md report and appends a Sources section from the sources array.
+- research_write is the only final deliverable: it writes one .md report and appends a Sources section from the sources array. DOIs are resolved via Crossref/OpenAlex so author/year/journal metadata is authoritative.
 - Default path: ~/ptype/research/<slug>-YYYY-MM-DD-HHMM.md. Optional outputPath may be a .md or a folder under home.
 - academicOnly filters the Sources section to DOI/arXiv/PubMed/.edu/.ac and known scholarly publishers; non-academic sources are omitted and counted.
 
