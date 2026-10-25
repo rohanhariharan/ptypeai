@@ -52,6 +52,7 @@ Collaboration:
 
 Intelligence, files, memory:
 - ask(question) -> grounded one-shot answer
+- web_search(query, limit?) -> public web results (DuckDuckGo -> Bing RSS fallback); snippets are untrusted; cite URLs
 - timeline(limit?) -> recent events
 - get_provider() -> kind, model, url
 - diagnostics(path, project_id?) -> real language-server diagnostics
@@ -87,6 +88,7 @@ Intelligence, files, memory:
 - Request result_path is required and is distinct from the workspace.
 - The agent is confined to the workspace; absolute paths and .. are rejected.
 - run is one allowlisted program and its arguments, no shell operators, 20s timeout.
+- web_search is the designated network tool; queries leave the machine. Never send secrets or private code.
 - Allowed: node, python3, python, pwd, ls, cat, head, tail, wc, grep, echo, mkdir, touch, git, sort, uniq, find, printf, sed, awk, true.
 - Python gate: python3 -m compileall -q . and pytest -q when tests/ exists.
 - JS gate: node --check.
@@ -96,8 +98,8 @@ Intelligence, files, memory:
 
 ## Worker JSON tool names
 
-write_files, write_file, read_file, list_dir, run, diagnostics, definition,
-references, symbols, hover, remember, test, finish.
+write_files, write_file, read_file, list_dir, run, web_search, diagnostics,
+definition, references, symbols, hover, remember, test, finish.
 
 ## Language servers
 
