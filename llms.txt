@@ -1,0 +1,30 @@
+# ptype / Motif
+
+> ptype is a local-first AI console. Projects, requests and a real file-writing agent run on your machine. Motif is the desktop app. Bring your own model (Ollama, OpenAI-compatible or Anthropic). No account, no telemetry, no cloud.
+
+## Primary pages
+
+- [Docs](https://ptype.app/docs): complete manual for Motif/ptype — install, concepts, Talk, agents, verification, Pips, plugins, models, thinking, MCP, LSP, memory, RAG, background, Tachyon, API, security, development.
+- [For agents](https://ptype.app/foragents): machine-oriented reference with the MCP endpoint, complete tool table, HTTP routes, workspace/run contract, LSP, memory and safety limits.
+- [Agent plain text](https://ptype.app/foragents.txt): condensed text reference.
+- [Downloads](https://ptype.app/downloads): macOS arm64/Intel, Windows x64, Linux x64/arm64.
+
+## Engine
+
+- Base URL: http://localhost:8787
+- Health: http://localhost:8787/api/health
+- MCP: http://localhost:8787/mcp (JSON-RPC 2.0 over HTTP, 2024-11-05)
+- MCP client config:
+  {"mcpServers":{"ptype":{"url":"http://localhost:8787/mcp"}}}
+- Data: ~/ptype/ptype.db; workspaces: ~/ptype/<project-slug>/
+- Auth: none; CORS: *. Local trusted service; do not expose port 8787.
+
+## Agent rules (short)
+
+- Every request needs a result_path (file or folder).
+- Use MCP ledger tasks for a session-like queue: task_create -> task_claim -> task_finish.
+- run_task is long-running and destructive; it writes files and commits.
+- A written file is not success: compileall/pytest, node --check, LSP errors and the tester gate.
+- Failed work is not committed or copied.
+- Memory scopes: global/project/agent; levels: nobot=read, subbot=read/write/create, superbot=+delete.
+- No per-session todo; the sidebar's Todo is open project requests.

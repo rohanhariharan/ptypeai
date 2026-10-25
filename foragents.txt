@@ -1,0 +1,136 @@
+# ptype / Motif — agent reference
+
+Canonical human docs: https://ptype.app/docs
+Full agent page: https://ptype.app/foragents
+Downloads: https://ptype.app/downloads
+
+## Endpoint
+
+Engine: http://localhost:8787
+Health: GET /api/health
+MCP: POST http://localhost:8787/mcp (alias /api/mcp)
+Protocol: MCP JSON-RPC 2.0, protocolVersion 2024-11-05
+Transport: HTTP POST; capture the mcp-session-id response header from initialize.
+Data: ~/ptype/ptype.db and ~/ptype/<project-slug>/
+Auth: none. CORS: *. Treat as local-only; do not expose port 8787.
+
+## MCP client config (common shape)
+
+{
+  "mcpServers": {
+    "ptype": { "url": "http://localhost:8787/mcp" }
+  }
+}
+
+Claude Code:
+claude mcp add --transport http ptype http://localhost:8787/mcp
+
+## MCP tools
+
+Projects and requests:
+- list_projects() -> project ids, titles, brief, progress, git hash
+- create_project(description) -> project id
+- list_requests() -> pending id, state, title, project, result path
+- create_request(title, result_path, project_id?) -> request id
+- run_task(todo_id) -> runs the full agent (long, destructive)
+
+Ledger / Interlink:
+- task_create(title, result_path, project_id?, depends_on?) -> task id, blocked/ready
+- task_claim(task_id, agent_id?) -> atomic claim
+- task_await(task_id, timeout_ms?) -> block until ready/done/flagged
+- task_finish(task_id, summary?) -> done, releases dependents
+- task_flag(task_id, detail?) -> flagged for handoff
+- ledger_query(project?, state?, agent?) -> tasks with interlink state
+- ledger_events(since?, limit?) -> append-only events
+- signal(wire | op+task+arg) -> C claim, D done, S state, H handoff, F flag, Q/A/K/N messages, B batch
+- roster() -> agent codes and op vocabulary
+
+Collaboration:
+- send_message(text, to?, task_id?) -> directed or broadcast message
+- inbox(since?, mark_read?) -> messages for this agent
+- await_message(from?, timeout_ms?) -> block for a reply
+
+Intelligence, files, memory:
+- ask(question) -> grounded one-shot answer
+- timeline(limit?) -> recent events
+- get_provider() -> kind, model, url
+- diagnostics(path, project_id?) -> real language-server diagnostics
+- memory_create(text, scope?, project_id?, kind?, file?, conversation_id?, conversation_title?)
+- memory_write(id, text?, kind?, pinned?, file?)
+- memory_read(query?, scope?, project_id?, limit?)
+- memory_delete(id)
+
+## HTTP
+
+- GET /api/config ; POST /api/config
+- GET /api/models
+- GET /api/device/:key/snapshot
+- GET/POST /api/device/:key/projects
+- POST /api/device/:key/requests  (result_path mandatory)
+- POST /api/device/:key/run       { todoId } blocking
+- GET /api/threads/:todoId
+- GET/POST /api/runs ; POST /api/runs/:id/stop
+- GET /api/control ; POST /api/control/pause|resume|stop-all
+- GET /api/events (SSE)
+- GET/POST /api/jobs ; POST /api/jobs/:id/stop
+- GET /api/pips ; POST/PUT/DELETE /api/pips/:id
+- GET/POST /api/mcps ; PATCH/DELETE /api/mcps/:name ; POST /api/mcps/reload
+- GET/POST /api/lsp
+- GET /api/rag/status|graph ; POST /api/rag/index|query|ask
+- GET/POST /api/memory ; GET/PUT /api/memory/levels
+- GET /api/table ; GET /api/table/:topic
+- GET /api/workspace/:projectId
+
+## Workspace rules
+
+- Workspace: ~/ptype/<project-slug>/
+- Request result_path is required and is distinct from the workspace.
+- The agent is confined to the workspace; absolute paths and .. are rejected.
+- run is one allowlisted program and its arguments, no shell operators, 20s timeout.
+- Allowed: node, python3, python, pwd, ls, cat, head, tail, wc, grep, echo, mkdir, touch, git, sort, uniq, find, printf, sed, awk, true.
+- Python gate: python3 -m compileall -q . and pytest -q when tests/ exists.
+- JS gate: node --check.
+- LSP errors also reject. A tester Pip may review.
+- Only a passing request is committed and copied to result_path.
+- 12 steps per attempt, 3 attempts, 20 history entries, 180s model timeout.
+
+## Worker JSON tool names
+
+write_files, write_file, read_file, list_dir, run, diagnostics, definition,
+references, symbols, hover, remember, test, finish.
+
+## Language servers
+
+TS/JS: typescript-language-server --stdio, then tsc --lsp --stdio
+Python: pyright-langserver --stdio, then pylsp
+Go: gopls
+Rust: rust-analyzer
+C/C++: clangd
+Inventory: GET /api/lsp
+Diagnostics: POST /api/lsp {"op":"diagnostics","path":"...","project_id":"..."}
+Ops: diagnostics | definition | references | symbols | hover
+
+## Memory
+
+Scopes: global, project, agent.
+Files: ~/ptype/memory/{global,projects/<id>,agents/<agent>}/*.md
+Levels: nobot=read, subbot=read/write/create, superbot=+delete. Default subbot.
+There is no per-session todo; use ledger tasks (task_create/task_claim/task_finish)
+or project requests.
+
+## Safety
+
+No authentication; CORS *. Do not expose port 8787.
+Remote model providers receive prompts/tool results/excerpts.
+Workspace may contain secrets; the worker can read it.
+Tachyon launches opencode/Claude with dangerous auto-approve flags.
+
+## Minimal agent loop
+
+1. GET /api/health
+2. GET /api/models
+3. create/find project
+4. create request with result_path
+5. start run (POST /api/runs or MCP run_task)
+6. read thread/diffs
+7. report evidence, not claims
