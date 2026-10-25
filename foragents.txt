@@ -65,6 +65,7 @@ Intelligence, files, memory:
 ## HTTP
 
 - GET /api/config ; POST /api/config
+- GET/POST /api/integrations ; POST /api/integrations/export { target, path, title? }
 - GET /api/models
 - GET /api/device/:key/snapshot
 - GET/POST /api/device/:key/projects
