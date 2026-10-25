@@ -1,27 +1,48 @@
 {
   "latest": "v1.1.0",
   "version": "1.1.0",
-  "published": "2026-10-25T03:25:21Z",
+  "published": "2026-10-25T03:51:08.529Z",
   "macos_arm64": "/downloads/v1.1.0/Motif_1.1.0_aarch64.dmg",
-  "macos_x64": "/downloads/v1.0.1/Motif_1.0.1_x64.dmg",
-  "windows_x64": "/downloads/v1.0.1/Motif_1.0.1_x64-setup.exe",
+  "macos_x64": "/downloads/v1.1.0/Motif_1.1.0_x64.dmg",
+  "windows_x64": "/downloads/v1.1.0/Motif_1.1.0_x64-setup.exe",
   "releases": [
     {
       "tag": "v1.1.0",
-      "date": "2026-10-25T03:25:21Z",
+      "date": "2026-10-25T03:51:08.529Z",
       "assets": [
         {
           "name": "Motif_1.1.0_aarch64.dmg",
           "os": "macOS",
           "arch": "Apple silicon",
-          "size": 42821780,
+          "size": 42839836,
           "url": "/downloads/v1.1.0/Motif_1.1.0_aarch64.dmg"
+        },
+        {
+          "name": "Motif_1.1.0_x64.dmg",
+          "os": "macOS",
+          "arch": "Intel",
+          "size": 43028051,
+          "url": "/downloads/v1.1.0/Motif_1.1.0_x64.dmg"
+        },
+        {
+          "name": "Motif_1.1.0_x64-setup.exe",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 26250624,
+          "url": "/downloads/v1.1.0/Motif_1.1.0_x64-setup.exe"
+        },
+        {
+          "name": "Motif_1.1.0_x64_en-US.msi",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 38649856,
+          "url": "/downloads/v1.1.0/Motif_1.1.0_x64_en-US.msi"
         }
       ]
     },
     {
       "tag": "v1.0.1",
-      "date": "2026-10-20T18:47:04.771Z",
+      "date": "2026-10-25T03:51:08.133Z",
       "assets": [
         {
           "name": "Motif_1.0.1_aarch64.dmg",
@@ -55,7 +76,7 @@
     },
     {
       "tag": "v1.0.0",
-      "date": "2026-10-20T18:47:04.656Z",
+      "date": "2026-10-25T03:51:07.890Z",
       "assets": [
         {
           "name": "ptype_1.0.0_aarch64.dmg",
@@ -89,7 +110,7 @@
     },
     {
       "tag": "v0.2.4",
-      "date": "2026-10-20T18:47:04.438Z",
+      "date": "2026-10-25T03:51:07.716Z",
       "assets": [
         {
           "name": "ptype_0.2.4_aarch64.dmg",
@@ -123,7 +144,7 @@
     },
     {
       "tag": "v0.2.3.1",
-      "date": "2026-10-20T18:47:04.258Z",
+      "date": "2026-10-25T03:51:07.582Z",
       "assets": [
         {
           "name": "ptype_0.2.3_aarch64.dmg",
