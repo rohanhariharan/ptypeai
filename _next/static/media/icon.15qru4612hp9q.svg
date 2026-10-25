@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Pip">
-  <path d="M120 38 C128 72 152 84 164 110 C177 138 173 174 148 195 C135 206 105 206 92 195 C67 174 63 138 76 110 C88 84 112 72 120 38 Z" fill="#0b0b0d"/>
-  <g fill="#ffffff">
-    <rect x="106" y="146" width="11" height="32" rx="5.5"/>
-    <rect x="123" y="146" width="11" height="32" rx="5.5"/>
-  </g>
-</svg>
