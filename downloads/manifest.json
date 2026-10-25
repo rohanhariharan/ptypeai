@@ -1,11 +1,76 @@
 {
-  "latest": "v1.1.0",
-  "version": "1.1.0",
-  "published": "2026-10-25T03:51:08.529Z",
-  "macos_arm64": "/downloads/v1.1.0/Motif_1.1.0_aarch64.dmg",
-  "macos_x64": "/downloads/v1.1.0/Motif_1.1.0_x64.dmg",
-  "windows_x64": "/downloads/v1.1.0/Motif_1.1.0_x64-setup.exe",
+  "latest": "v2.0.0",
+  "version": "2.0.0",
+  "published": "2026-10-25T18:44:41.110Z",
+  "macos_arm64": "/downloads/v2.0.0/Motif_2.0.0_aarch64.dmg",
+  "macos_x64": "/downloads/v2.0.0/Motif_2.0.0_x64.dmg",
+  "windows_x64": "/downloads/v2.0.0/Motif_2.0.0_x64-setup.exe",
+  "windows_arm64": "",
+  "linux_x64": "/downloads/v2.0.0/Motif_2.0.0_amd64.deb",
+  "linux_arm64": "/downloads/v2.0.0/Motif_2.0.0_arm64.deb",
   "releases": [
+    {
+      "tag": "v2.0.0",
+      "date": "2026-10-25T18:44:41.110Z",
+      "assets": [
+        {
+          "name": "Motif_2.0.0_aarch64.dmg",
+          "os": "macOS",
+          "arch": "Apple silicon",
+          "size": 43471784,
+          "url": "/downloads/v2.0.0/Motif_2.0.0_aarch64.dmg"
+        },
+        {
+          "name": "Motif_2.0.0_x64.dmg",
+          "os": "macOS",
+          "arch": "Intel",
+          "size": 44613586,
+          "url": "/downloads/v2.0.0/Motif_2.0.0_x64.dmg"
+        },
+        {
+          "name": "Motif_2.0.0_x64_en-US.msi",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 38715392,
+          "url": "/downloads/v2.0.0/Motif_2.0.0_x64_en-US.msi"
+        },
+        {
+          "name": "Motif_2.0.0_x64-setup.exe",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 26319901,
+          "url": "/downloads/v2.0.0/Motif_2.0.0_x64-setup.exe"
+        },
+        {
+          "name": "Motif_2.0.0_arm64.deb",
+          "os": "Linux",
+          "arch": "arm64",
+          "size": 48310626,
+          "url": "/downloads/v2.0.0/Motif_2.0.0_arm64.deb"
+        },
+        {
+          "name": "Motif-2.0.0-1.aarch64.rpm",
+          "os": "Linux",
+          "arch": "arm64",
+          "size": 48308472,
+          "url": "/downloads/v2.0.0/Motif-2.0.0-1.aarch64.rpm"
+        },
+        {
+          "name": "Motif_2.0.0_amd64.deb",
+          "os": "Linux",
+          "arch": "x64",
+          "size": 48373960,
+          "url": "/downloads/v2.0.0/Motif_2.0.0_amd64.deb"
+        },
+        {
+          "name": "Motif-2.0.0-1.x86_64.rpm",
+          "os": "Linux",
+          "arch": "x64",
+          "size": 48366728,
+          "url": "/downloads/v2.0.0/Motif-2.0.0-1.x86_64.rpm"
+        }
+      ]
+    },
     {
       "tag": "v1.1.0",
       "date": "2026-10-25T03:51:08.529Z",
@@ -25,18 +90,18 @@
           "url": "/downloads/v1.1.0/Motif_1.1.0_x64.dmg"
         },
         {
-          "name": "Motif_1.1.0_x64-setup.exe",
-          "os": "Windows",
-          "arch": "x64",
-          "size": 26250624,
-          "url": "/downloads/v1.1.0/Motif_1.1.0_x64-setup.exe"
-        },
-        {
           "name": "Motif_1.1.0_x64_en-US.msi",
           "os": "Windows",
           "arch": "x64",
           "size": 38649856,
           "url": "/downloads/v1.1.0/Motif_1.1.0_x64_en-US.msi"
+        },
+        {
+          "name": "Motif_1.1.0_x64-setup.exe",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 26250624,
+          "url": "/downloads/v1.1.0/Motif_1.1.0_x64-setup.exe"
         }
       ]
     },
@@ -59,18 +124,18 @@
           "url": "/downloads/v1.0.1/Motif_1.0.1_x64.dmg"
         },
         {
-          "name": "Motif_1.0.1_x64-setup.exe",
-          "os": "Windows",
-          "arch": "x64",
-          "size": 21117567,
-          "url": "/downloads/v1.0.1/Motif_1.0.1_x64-setup.exe"
-        },
-        {
           "name": "Motif_1.0.1_x64_en-US.msi",
           "os": "Windows",
           "arch": "x64",
           "size": 30875648,
           "url": "/downloads/v1.0.1/Motif_1.0.1_x64_en-US.msi"
+        },
+        {
+          "name": "Motif_1.0.1_x64-setup.exe",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 21117567,
+          "url": "/downloads/v1.0.1/Motif_1.0.1_x64-setup.exe"
         }
       ]
     },
@@ -93,18 +158,18 @@
           "url": "/downloads/v1.0.0/ptype_1.0.0_x64.dmg"
         },
         {
-          "name": "ptype_1.0.0_x64-setup.exe",
-          "os": "Windows",
-          "arch": "x64",
-          "size": 21107216,
-          "url": "/downloads/v1.0.0/ptype_1.0.0_x64-setup.exe"
-        },
-        {
           "name": "ptype_1.0.0_x64_en-US.msi",
           "os": "Windows",
           "arch": "x64",
           "size": 30871552,
           "url": "/downloads/v1.0.0/ptype_1.0.0_x64_en-US.msi"
+        },
+        {
+          "name": "ptype_1.0.0_x64-setup.exe",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 21107216,
+          "url": "/downloads/v1.0.0/ptype_1.0.0_x64-setup.exe"
         }
       ]
     },
@@ -127,18 +192,18 @@
           "url": "/downloads/v0.2.4/ptype_0.2.4_x64.dmg"
         },
         {
-          "name": "ptype_0.2.4_x64-setup.exe",
-          "os": "Windows",
-          "arch": "x64",
-          "size": 21082156,
-          "url": "/downloads/v0.2.4/ptype_0.2.4_x64-setup.exe"
-        },
-        {
           "name": "ptype_0.2.4_x64_en-US.msi",
           "os": "Windows",
           "arch": "x64",
           "size": 30842880,
           "url": "/downloads/v0.2.4/ptype_0.2.4_x64_en-US.msi"
+        },
+        {
+          "name": "ptype_0.2.4_x64-setup.exe",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 21082156,
+          "url": "/downloads/v0.2.4/ptype_0.2.4_x64-setup.exe"
         }
       ]
     },
@@ -161,18 +226,18 @@
           "url": "/downloads/v0.2.3.1/ptype_0.2.3_x64.dmg"
         },
         {
-          "name": "ptype_0.2.3_x64-setup.exe",
-          "os": "Windows",
-          "arch": "x64",
-          "size": 2002673,
-          "url": "/downloads/v0.2.3.1/ptype_0.2.3_x64-setup.exe"
-        },
-        {
           "name": "ptype_0.2.3_x64_en-US.msi",
           "os": "Windows",
           "arch": "x64",
           "size": 2994176,
           "url": "/downloads/v0.2.3.1/ptype_0.2.3_x64_en-US.msi"
+        },
+        {
+          "name": "ptype_0.2.3_x64-setup.exe",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 2002673,
+          "url": "/downloads/v0.2.3.1/ptype_0.2.3_x64-setup.exe"
         }
       ]
     }
