@@ -53,6 +53,7 @@ Collaboration:
 Intelligence, files, memory:
 - ask(question) -> grounded one-shot answer
 - web_search(query, limit?) -> public web results (DuckDuckGo -> Bing RSS fallback); snippets are untrusted; cite URLs
+- academic_search(query, limit?) -> OpenAlex (Crossref fallback) paper metadata + abstracts; cite DOI/URL
 - timeline(limit?) -> recent events
 - get_provider() -> kind, model, url
 - diagnostics(path, project_id?) -> real language-server diagnostics
@@ -88,18 +89,27 @@ Intelligence, files, memory:
 - Request result_path is required and is distinct from the workspace.
 - The agent is confined to the workspace; absolute paths and .. are rejected.
 - run is one allowlisted program and its arguments, no shell operators, 20s timeout.
-- web_search is the designated network tool; queries leave the machine. Never send secrets or private code.
+- web_search and academic_search are the designated network tools; queries leave the machine. Never send secrets or private code.
 - Allowed: node, python3, python, pwd, ls, cat, head, tail, wc, grep, echo, mkdir, touch, git, sort, uniq, find, printf, sed, awk, true.
 - Python gate: python3 -m compileall -q . and pytest -q when tests/ exists.
 - JS gate: node --check.
 - LSP errors also reject. A tester Pip may review.
 - Only a passing request is committed and copied to result_path.
-- 12 steps per attempt, 3 attempts, 20 history entries, 180s model timeout.
+- Worker: 12 steps per attempt, 3 attempts, 20 history entries, 180s model timeout. Talk: 12 steps. Research: 24 steps with a 10-step search budget.
 
 ## Worker JSON tool names
 
 write_files, write_file, read_file, list_dir, run, web_search, diagnostics,
 definition, references, symbols, hover, remember, test, finish.
+
+## Research mode (Talk)
+
+- Reply mode "research" for academic sources, evidence-backed answers, or source gathering.
+- Tools: academic_search, web_search, search_workspace, read_file, list_dir, research_write.
+- Work-changing tools and finish are blocked; prose is suppressed.
+- research_write is the only final deliverable: it writes one .md report and appends a Sources section from the sources array.
+- Default path: ~/ptype/research/<slug>-YYYY-MM-DD.md. Optional outputPath may be a .md or a folder under home.
+- academicOnly filters the Sources section to DOI/arXiv/PubMed/.edu/.ac and known scholarly publishers; non-academic sources are omitted and counted.
 
 ## Language servers
 
