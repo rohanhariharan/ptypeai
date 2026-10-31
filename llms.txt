@@ -8,6 +8,7 @@
 - [For agents](https://ptype.app/foragents): machine-oriented reference with the MCP endpoint, complete tool table, HTTP routes, workspace/run contract, LSP, memory and safety limits.
 - [Agent plain text](https://ptype.app/foragents.txt): condensed text reference.
 - [Downloads](https://ptype.app/downloads): macOS arm64/Intel, Windows x64, Linux x64/arm64.
+- [Pricing](https://ptype.app/pricing): Base (free) versus Spark and Pro — full feature comparison table.
 
 ## Engine
 
