@@ -1,0 +1,1 @@
+.MoCCaq_page{background:var(--bg);min-height:100svh;color:var(--ink);place-items:center;padding:40px;display:grid}.MoCCaq_line{text-align:center;text-wrap:balance;max-width:1040px;margin:0;font-size:clamp(28px,4.6vw,62px);line-height:1.12}@media (max-width:560px){.MoCCaq_page{padding:28px}.MoCCaq_line{font-size:clamp(26px,8.2vw,42px)}}
