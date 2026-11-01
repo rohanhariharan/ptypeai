@@ -4,11 +4,13 @@
 
 ## Primary pages
 
-- [Docs](https://ptype.app/docs): complete manual for Motif/ptype — install, concepts, Talk and Research mode, agents, verification, Pips, plugins, models, thinking, MCP, LSP, memory, RAG, background, Tachyon, API, security, development.
+- [Motif](https://ptype.app/motif): the product, what it does, Tachyon, motif.local and the plans.
+- [Docs](https://ptype.app/docs): complete manual for Motif and ptype: install, concepts, Talk and Research mode, agents, verification, Pips, plugins, models, thinking, MCP, LSP, memory, RAG, background, Tachyon, API, security, development.
 - [For agents](https://ptype.app/foragents): machine-oriented reference with the MCP endpoint, complete tool table, HTTP routes, workspace/run contract, LSP, memory and safety limits.
 - [Agent plain text](https://ptype.app/foragents.txt): condensed text reference.
 - [Downloads](https://ptype.app/downloads): macOS arm64/Intel, Windows x64, Linux x64/arm64.
-- [Pricing](https://ptype.app/pricing): Base (free) versus Spark and Pro — full feature comparison table.
+- [Pricing](https://ptype.app/pricing): Base (free) versus Spark and Pro, with the state of each paid tier.
+- [Legal](https://ptype.app/legal): the personal use licence, commercial use, and privacy.
 
 ## Engine
 
