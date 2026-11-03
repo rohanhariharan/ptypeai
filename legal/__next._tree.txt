@@ -1,5 +1,5 @@
-:HL["/_next/static/chunks/3qx1h5mki9eaq.css","style"]
+:HL["/_next/static/chunks/3ek51btc2suic.css","style"]
 :HL["/_next/static/chunks/2quung57bi55b.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"legal","h":96,"c":"$Q2"}]]
-0:{"b":"8OtBJg4B7eyAk-qB1elC9","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"nTrW6vAkidngnbTySubM6","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
