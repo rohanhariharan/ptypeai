@@ -1,17 +1,17 @@
 #!/bin/sh
-# Motif installer — downloads the latest macOS build from ptype.app, installs it
+# Typecode installer — downloads the latest macOS build from ptype.app, installs it
 # to /Applications, and clears the Gatekeeper quarantine flag so it opens clean.
 #
 #   curl -fsSL https://ptype.app/install | sh
 #
-# The website is the only source of truth for Motif builds.
+# The website is the only source of truth for Typecode builds.
 set -eu
 
 BASE="https://ptype.app"
 DEST="/Applications"
 
 if [ "$(uname -s)" != "Darwin" ]; then
-  echo "Motif: this installer is for macOS."
+  echo "Typecode: this installer is for macOS."
   echo "Other builds: ${BASE}/downloads"
   exit 1
 fi
@@ -20,32 +20,34 @@ fi
 key="macos_arm64"
 [ "$(uname -m)" = "x86_64" ] && key="macos_x64"
 
-echo "Motif — finding the latest build…"
+echo "Typecode — finding the latest build…"
 path="$(curl -fsSL "${BASE}/downloads/manifest.json" \
   | grep -o "\"${key}\":[[:space:]]*\"[^\"]*\"" \
   | head -1 \
   | sed 's/.*"\([^"]*\)"[[:space:]]*$/\1/')"
 
 if [ -z "${path:-}" ]; then
-  echo "Motif: no build found — see ${BASE}/downloads"
+  echo "Typecode: no build found — see ${BASE}/downloads"
   exit 1
 fi
 
 url="${BASE}${path}"
 tmp="$(mktemp -d)"
 trap 'rm -rf "$tmp"' EXIT
-dmg="$tmp/motif.dmg"
+dmg="$tmp/typecode.dmg"
 
-echo "Motif — downloading $(basename "$url")…"
+echo "Typecode — downloading $(basename "$url")…"
 curl -#fL "$url" -o "$dmg"
 
-echo "Motif — mounting…"
+echo "Typecode — mounting…"
 mnt="$(hdiutil attach -nobrowse -readonly "$dmg" | grep -o '/Volumes/.*' | head -1)"
 cleanup() { hdiutil detach "$mnt" >/dev/null 2>&1 || true; }
 trap 'cleanup; rm -rf "$tmp"' EXIT
 
-# current builds ship Motif.app; older ones shipped Axle.app / ptype.app
-if [ -d "${mnt}/Motif.app" ]; then
+# current builds ship Typecode.app; 2.0 shipped Motif.app, older ones Axle.app / ptype.app
+if [ -d "${mnt}/Typecode.app" ]; then
+  APP="Typecode.app"
+elif [ -d "${mnt}/Motif.app" ]; then
   APP="Motif.app"
 elif [ -d "${mnt}/Axle.app" ]; then
   APP="Axle.app"
@@ -53,7 +55,7 @@ else
   APP="ptype.app"
 fi
 
-echo "Motif — installing ${APP} to ${DEST}…"
+echo "Typecode — installing ${APP} to ${DEST}…"
 rm -rf "${DEST:?}/${APP}"
 cp -R "${mnt}/${APP}" "${DEST}/"
 
@@ -62,7 +64,7 @@ cp -R "${mnt}/${APP}" "${DEST}/"
 xattr -dr com.apple.quarantine "${DEST}/${APP}" 2>/dev/null || true
 codesign --force --deep --sign - "${DEST}/${APP}" >/dev/null 2>&1 || true
 
-echo "Motif — installed. Launching…"
+echo "Typecode — installed. Launching…"
 open "${DEST}/${APP}"
 echo
-echo "Done. Motif needs a model provider — Ollama by default: https://ollama.com"
+echo "Done. Typecode needs a model provider — Ollama by default: https://ollama.com"

@@ -1,4 +1,4 @@
-# ptype and Motif: agent reference
+# ptype and Typecode: agent reference
 
 Canonical human docs: https://ptype.app/docs
 Full agent page: https://ptype.app/foragents

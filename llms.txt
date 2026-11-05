@@ -1,13 +1,13 @@
-# ptype / Motif
+# ptype / Typecode
 
-> ptype is a local-first AI console. Projects, requests and a real file-writing agent run on your machine. Motif is the desktop app. Bring your own model (Ollama, OpenAI-compatible or Anthropic). No account, no telemetry, no cloud.
+> ptype is a local-first AI console. Projects, requests and a real file-writing agent run on your machine. Typecode is the desktop app. Bring your own model (Ollama, OpenAI-compatible or Anthropic). No account, no telemetry, no cloud.
 
 ## Primary pages
 
-- [Motif](https://ptype.app/motif): the product, what it does, Tachyon, motif.local and the plans.
+- [Typecode](https://ptype.app/typecode): the product, what it does, Tachyon, typecode.local and the plans.
 - [Autonomy](https://ptype.app/autonomy): the three modes, the policy that steers the loop, and where it stops.
 - [Jobs](https://ptype.app/jobs): open roles across research, technical, design and financial.
-- [Docs](https://ptype.app/docs): complete manual for Motif and ptype: install, concepts, Talk and Research mode, agents, verification, Pips, plugins, models, thinking, MCP, LSP, memory, RAG, background, Tachyon, API, security, development.
+- [Docs](https://ptype.app/docs): complete manual for Typecode and ptype: install, concepts, Talk and Research mode, agents, verification, Pips, plugins, models, thinking, MCP, LSP, memory, RAG, background, Tachyon, API, security, development.
 - [For agents](https://ptype.app/foragents): machine-oriented reference with the MCP endpoint, complete tool table, HTTP routes, workspace/run contract, LSP, memory and safety limits.
 - [Agent plain text](https://ptype.app/foragents.txt): condensed text reference.
 - [Downloads](https://ptype.app/downloads): macOS arm64/Intel, Windows x64, Linux x64/arm64.
