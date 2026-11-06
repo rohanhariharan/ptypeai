@@ -1,73 +1,136 @@
 {
-  "latest": "v2.0.0",
-  "version": "2.0.0",
-  "published": "2026-10-25T18:44:41.110Z",
-  "macos_arm64": "/downloads/v2.0.0/Motif_2.0.0_aarch64.dmg",
-  "macos_x64": "/downloads/v2.0.0/Motif_2.0.0_x64.dmg",
-  "windows_x64": "/downloads/v2.0.0/Motif_2.0.0_x64-setup.exe",
+  "product": "Typecode",
+  "latest": "v3.0.0",
+  "version": "3.0.0",
+  "published": "2026-11-06T03:57:39.016Z",
+  "macos_arm64": "/downloads/v3.0.0/Typecode_3.0.0_aarch64.dmg",
+  "macos_x64": "/downloads/v3.0.0/Typecode_3.0.0_x64.dmg",
+  "windows_x64": "/downloads/v3.0.0/Typecode_3.0.0_x64-setup.exe",
   "windows_arm64": "",
-  "linux_x64": "/downloads/v2.0.0/Motif_2.0.0_amd64.deb",
-  "linux_arm64": "/downloads/v2.0.0/Motif_2.0.0_arm64.deb",
+  "linux_x64": "/downloads/v3.0.0/Typecode_3.0.0_amd64.deb",
+  "linux_arm64": "/downloads/v3.0.0/Typecode_3.0.0_arm64.deb",
   "releases": [
+    {
+      "tag": "v3.0.0",
+      "date": "2026-11-06T03:57:39.016Z",
+      "assets": [
+        {
+          "name": "Typecode_3.0.0_aarch64.dmg",
+          "os": "macOS",
+          "arch": "Apple silicon",
+          "size": 44718136,
+          "url": "/downloads/v3.0.0/Typecode_3.0.0_aarch64.dmg"
+        },
+        {
+          "name": "Typecode_3.0.0_x64.dmg",
+          "os": "macOS",
+          "arch": "Intel",
+          "size": 45643424,
+          "url": "/downloads/v3.0.0/Typecode_3.0.0_x64.dmg"
+        },
+        {
+          "name": "Typecode_3.0.0_x64_en-US.msi",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 39759872,
+          "url": "/downloads/v3.0.0/Typecode_3.0.0_x64_en-US.msi"
+        },
+        {
+          "name": "Typecode_3.0.0_x64-setup.exe",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 27361672,
+          "url": "/downloads/v3.0.0/Typecode_3.0.0_x64-setup.exe"
+        },
+        {
+          "name": "Typecode_3.0.0_arm64.deb",
+          "os": "Linux",
+          "arch": "arm64",
+          "size": 49520714,
+          "url": "/downloads/v3.0.0/Typecode_3.0.0_arm64.deb"
+        },
+        {
+          "name": "Typecode-3.0.0-1.aarch64.rpm",
+          "os": "Linux",
+          "arch": "arm64",
+          "size": 49523728,
+          "url": "/downloads/v3.0.0/Typecode-3.0.0-1.aarch64.rpm"
+        },
+        {
+          "name": "Typecode_3.0.0_amd64.deb",
+          "os": "Linux",
+          "arch": "x64",
+          "size": 49590522,
+          "url": "/downloads/v3.0.0/Typecode_3.0.0_amd64.deb"
+        },
+        {
+          "name": "Typecode-3.0.0-1.x86_64.rpm",
+          "os": "Linux",
+          "arch": "x64",
+          "size": 49584716,
+          "url": "/downloads/v3.0.0/Typecode-3.0.0-1.x86_64.rpm"
+        }
+      ]
+    },
     {
       "tag": "v2.0.0",
       "date": "2026-10-25T18:44:41.110Z",
       "assets": [
         {
-          "name": "Motif_2.0.0_aarch64.dmg",
+          "name": "Typecode_2.0.0_aarch64.dmg",
           "os": "macOS",
           "arch": "Apple silicon",
           "size": 43692812,
-          "url": "/downloads/v2.0.0/Motif_2.0.0_aarch64.dmg"
+          "url": "/downloads/v2.0.0/Typecode_2.0.0_aarch64.dmg"
         },
         {
-          "name": "Motif_2.0.0_x64.dmg",
+          "name": "Typecode_2.0.0_x64.dmg",
           "os": "macOS",
           "arch": "Intel",
           "size": 44839559,
-          "url": "/downloads/v2.0.0/Motif_2.0.0_x64.dmg"
+          "url": "/downloads/v2.0.0/Typecode_2.0.0_x64.dmg"
         },
         {
-          "name": "Motif_2.0.0_x64_en-US.msi",
+          "name": "Typecode_2.0.0_x64_en-US.msi",
           "os": "Windows",
           "arch": "x64",
           "size": 38813696,
-          "url": "/downloads/v2.0.0/Motif_2.0.0_x64_en-US.msi"
+          "url": "/downloads/v2.0.0/Typecode_2.0.0_x64_en-US.msi"
         },
         {
-          "name": "Motif_2.0.0_x64-setup.exe",
+          "name": "Typecode_2.0.0_x64-setup.exe",
           "os": "Windows",
           "arch": "x64",
           "size": 26384699,
-          "url": "/downloads/v2.0.0/Motif_2.0.0_x64-setup.exe"
+          "url": "/downloads/v2.0.0/Typecode_2.0.0_x64-setup.exe"
         },
         {
-          "name": "Motif_2.0.0_arm64.deb",
+          "name": "Typecode_2.0.0_arm64.deb",
           "os": "Linux",
           "arch": "arm64",
           "size": 48565664,
-          "url": "/downloads/v2.0.0/Motif_2.0.0_arm64.deb"
+          "url": "/downloads/v2.0.0/Typecode_2.0.0_arm64.deb"
         },
         {
-          "name": "Motif-2.0.0-1.aarch64.rpm",
+          "name": "Typecode-2.0.0-1.aarch64.rpm",
           "os": "Linux",
           "arch": "arm64",
           "size": 48562180,
-          "url": "/downloads/v2.0.0/Motif-2.0.0-1.aarch64.rpm"
+          "url": "/downloads/v2.0.0/Typecode-2.0.0-1.aarch64.rpm"
         },
         {
-          "name": "Motif_2.0.0_amd64.deb",
+          "name": "Typecode_2.0.0_amd64.deb",
           "os": "Linux",
           "arch": "x64",
           "size": 48634720,
-          "url": "/downloads/v2.0.0/Motif_2.0.0_amd64.deb"
+          "url": "/downloads/v2.0.0/Typecode_2.0.0_amd64.deb"
         },
         {
-          "name": "Motif-2.0.0-1.x86_64.rpm",
+          "name": "Typecode-2.0.0-1.x86_64.rpm",
           "os": "Linux",
           "arch": "x64",
           "size": 48634250,
-          "url": "/downloads/v2.0.0/Motif-2.0.0-1.x86_64.rpm"
+          "url": "/downloads/v2.0.0/Typecode-2.0.0-1.x86_64.rpm"
         }
       ]
     },
@@ -76,32 +139,32 @@
       "date": "2026-10-25T03:51:08.529Z",
       "assets": [
         {
-          "name": "Motif_1.1.0_aarch64.dmg",
+          "name": "Typecode_1.1.0_aarch64.dmg",
           "os": "macOS",
           "arch": "Apple silicon",
           "size": 42839836,
-          "url": "/downloads/v1.1.0/Motif_1.1.0_aarch64.dmg"
+          "url": "/downloads/v1.1.0/Typecode_1.1.0_aarch64.dmg"
         },
         {
-          "name": "Motif_1.1.0_x64.dmg",
+          "name": "Typecode_1.1.0_x64.dmg",
           "os": "macOS",
           "arch": "Intel",
           "size": 43028051,
-          "url": "/downloads/v1.1.0/Motif_1.1.0_x64.dmg"
+          "url": "/downloads/v1.1.0/Typecode_1.1.0_x64.dmg"
         },
         {
-          "name": "Motif_1.1.0_x64_en-US.msi",
+          "name": "Typecode_1.1.0_x64_en-US.msi",
           "os": "Windows",
           "arch": "x64",
           "size": 38649856,
-          "url": "/downloads/v1.1.0/Motif_1.1.0_x64_en-US.msi"
+          "url": "/downloads/v1.1.0/Typecode_1.1.0_x64_en-US.msi"
         },
         {
-          "name": "Motif_1.1.0_x64-setup.exe",
+          "name": "Typecode_1.1.0_x64-setup.exe",
           "os": "Windows",
           "arch": "x64",
           "size": 26250624,
-          "url": "/downloads/v1.1.0/Motif_1.1.0_x64-setup.exe"
+          "url": "/downloads/v1.1.0/Typecode_1.1.0_x64-setup.exe"
         }
       ]
     },
@@ -110,32 +173,32 @@
       "date": "2026-10-20T18:47:04.771Z",
       "assets": [
         {
-          "name": "Motif_1.0.1_aarch64.dmg",
+          "name": "Typecode_1.0.1_aarch64.dmg",
           "os": "macOS",
           "arch": "Apple silicon",
           "size": 34660828,
-          "url": "/downloads/v1.0.1/Motif_1.0.1_aarch64.dmg"
+          "url": "/downloads/v1.0.1/Typecode_1.0.1_aarch64.dmg"
         },
         {
-          "name": "Motif_1.0.1_x64.dmg",
+          "name": "Typecode_1.0.1_x64.dmg",
           "os": "macOS",
           "arch": "Intel",
           "size": 34840257,
-          "url": "/downloads/v1.0.1/Motif_1.0.1_x64.dmg"
+          "url": "/downloads/v1.0.1/Typecode_1.0.1_x64.dmg"
         },
         {
-          "name": "Motif_1.0.1_x64_en-US.msi",
+          "name": "Typecode_1.0.1_x64_en-US.msi",
           "os": "Windows",
           "arch": "x64",
           "size": 30875648,
-          "url": "/downloads/v1.0.1/Motif_1.0.1_x64_en-US.msi"
+          "url": "/downloads/v1.0.1/Typecode_1.0.1_x64_en-US.msi"
         },
         {
-          "name": "Motif_1.0.1_x64-setup.exe",
+          "name": "Typecode_1.0.1_x64-setup.exe",
           "os": "Windows",
           "arch": "x64",
           "size": 21117567,
-          "url": "/downloads/v1.0.1/Motif_1.0.1_x64-setup.exe"
+          "url": "/downloads/v1.0.1/Typecode_1.0.1_x64-setup.exe"
         }
       ]
     },
@@ -144,32 +207,32 @@
       "date": "2026-10-20T18:47:04.656Z",
       "assets": [
         {
-          "name": "ptype_1.0.0_aarch64.dmg",
+          "name": "Typecode_1.0.0_aarch64.dmg",
           "os": "macOS",
           "arch": "Apple silicon",
           "size": 34970559,
-          "url": "/downloads/v1.0.0/ptype_1.0.0_aarch64.dmg"
+          "url": "/downloads/v1.0.0/Typecode_1.0.0_aarch64.dmg"
         },
         {
-          "name": "ptype_1.0.0_x64.dmg",
+          "name": "Typecode_1.0.0_x64.dmg",
           "os": "macOS",
           "arch": "Intel",
           "size": 35173896,
-          "url": "/downloads/v1.0.0/ptype_1.0.0_x64.dmg"
+          "url": "/downloads/v1.0.0/Typecode_1.0.0_x64.dmg"
         },
         {
-          "name": "ptype_1.0.0_x64_en-US.msi",
+          "name": "Typecode_1.0.0_x64_en-US.msi",
           "os": "Windows",
           "arch": "x64",
           "size": 30871552,
-          "url": "/downloads/v1.0.0/ptype_1.0.0_x64_en-US.msi"
+          "url": "/downloads/v1.0.0/Typecode_1.0.0_x64_en-US.msi"
         },
         {
-          "name": "ptype_1.0.0_x64-setup.exe",
+          "name": "Typecode_1.0.0_x64-setup.exe",
           "os": "Windows",
           "arch": "x64",
           "size": 21107216,
-          "url": "/downloads/v1.0.0/ptype_1.0.0_x64-setup.exe"
+          "url": "/downloads/v1.0.0/Typecode_1.0.0_x64-setup.exe"
         }
       ]
     },
@@ -178,32 +241,32 @@
       "date": "2026-10-20T18:47:04.438Z",
       "assets": [
         {
-          "name": "ptype_0.2.4_aarch64.dmg",
+          "name": "Typecode_0.2.4_aarch64.dmg",
           "os": "macOS",
           "arch": "Apple silicon",
           "size": 34934543,
-          "url": "/downloads/v0.2.4/ptype_0.2.4_aarch64.dmg"
+          "url": "/downloads/v0.2.4/Typecode_0.2.4_aarch64.dmg"
         },
         {
-          "name": "ptype_0.2.4_x64.dmg",
+          "name": "Typecode_0.2.4_x64.dmg",
           "os": "macOS",
           "arch": "Intel",
           "size": 35123084,
-          "url": "/downloads/v0.2.4/ptype_0.2.4_x64.dmg"
+          "url": "/downloads/v0.2.4/Typecode_0.2.4_x64.dmg"
         },
         {
-          "name": "ptype_0.2.4_x64_en-US.msi",
+          "name": "Typecode_0.2.4_x64_en-US.msi",
           "os": "Windows",
           "arch": "x64",
           "size": 30842880,
-          "url": "/downloads/v0.2.4/ptype_0.2.4_x64_en-US.msi"
+          "url": "/downloads/v0.2.4/Typecode_0.2.4_x64_en-US.msi"
         },
         {
-          "name": "ptype_0.2.4_x64-setup.exe",
+          "name": "Typecode_0.2.4_x64-setup.exe",
           "os": "Windows",
           "arch": "x64",
           "size": 21082156,
-          "url": "/downloads/v0.2.4/ptype_0.2.4_x64-setup.exe"
+          "url": "/downloads/v0.2.4/Typecode_0.2.4_x64-setup.exe"
         }
       ]
     },
@@ -212,32 +275,32 @@
       "date": "2026-10-20T18:47:04.258Z",
       "assets": [
         {
-          "name": "ptype_0.2.3_aarch64.dmg",
+          "name": "Typecode_0.2.3_aarch64.dmg",
           "os": "macOS",
           "arch": "Apple silicon",
           "size": 5160668,
-          "url": "/downloads/v0.2.3.1/ptype_0.2.3_aarch64.dmg"
+          "url": "/downloads/v0.2.3.1/Typecode_0.2.3_aarch64.dmg"
         },
         {
-          "name": "ptype_0.2.3_x64.dmg",
+          "name": "Typecode_0.2.3_x64.dmg",
           "os": "macOS",
           "arch": "Intel",
           "size": 5346754,
-          "url": "/downloads/v0.2.3.1/ptype_0.2.3_x64.dmg"
+          "url": "/downloads/v0.2.3.1/Typecode_0.2.3_x64.dmg"
         },
         {
-          "name": "ptype_0.2.3_x64_en-US.msi",
+          "name": "Typecode_0.2.3_x64_en-US.msi",
           "os": "Windows",
           "arch": "x64",
           "size": 2994176,
-          "url": "/downloads/v0.2.3.1/ptype_0.2.3_x64_en-US.msi"
+          "url": "/downloads/v0.2.3.1/Typecode_0.2.3_x64_en-US.msi"
         },
         {
-          "name": "ptype_0.2.3_x64-setup.exe",
+          "name": "Typecode_0.2.3_x64-setup.exe",
           "os": "Windows",
           "arch": "x64",
           "size": 2002673,
-          "url": "/downloads/v0.2.3.1/ptype_0.2.3_x64-setup.exe"
+          "url": "/downloads/v0.2.3.1/Typecode_0.2.3_x64-setup.exe"
         }
       ]
     }
