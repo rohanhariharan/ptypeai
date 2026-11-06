@@ -44,15 +44,11 @@ mnt="$(hdiutil attach -nobrowse -readonly "$dmg" | grep -o '/Volumes/.*' | head 
 cleanup() { hdiutil detach "$mnt" >/dev/null 2>&1 || true; }
 trap 'cleanup; rm -rf "$tmp"' EXIT
 
-# current builds ship Typecode.app; 2.0 shipped Motif.app, older ones Axle.app / ptype.app
 if [ -d "${mnt}/Typecode.app" ]; then
   APP="Typecode.app"
-elif [ -d "${mnt}/Motif.app" ]; then
-  APP="Motif.app"
-elif [ -d "${mnt}/Axle.app" ]; then
-  APP="Axle.app"
 else
-  APP="ptype.app"
+  echo "Typecode: this build does not contain Typecode.app" >&2
+  exit 1
 fi
 
 echo "Typecode — installing ${APP} to ${DEST}…"
