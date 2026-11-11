@@ -72,11 +72,16 @@ Intelligence, files, memory:
 - POST /api/device/:key/requests  (result_path mandatory)
 - POST /api/device/:key/run       { todoId } blocking
 - GET /api/threads/:todoId
+- POST /api/projects/open           { path, mode?: worktree|direct, branch? }
+- GET/POST /api/projects/:id/commands
+- GET/POST/DELETE /api/projects/:id/serve ; POST /api/projects/:id/serve/stop
+- GET /api/servers
+- POST /api/repos/inspect            { path }
+- GET/POST /api/skills ; GET/PUT/DELETE /api/skills/:id
 - GET/POST /api/runs ; POST /api/runs/:id/stop
 - GET /api/control ; POST /api/control/pause|resume|stop-all
 - GET /api/events (SSE)
 - GET/POST /api/jobs ; POST /api/jobs/:id/stop
-- GET /api/pips ; POST/PUT/DELETE /api/pips/:id
 - GET/POST /api/mcps ; PATCH/DELETE /api/mcps/:name ; POST /api/mcps/reload
 - GET/POST /api/lsp
 - GET /api/rag/status|graph ; POST /api/rag/index|query|ask
@@ -86,22 +91,23 @@ Intelligence, files, memory:
 
 ## Workspace rules
 
-- Workspace: ~/ptype/<project-slug>/
+- Workspace: ~/ptype/<project-slug>/ for new work, or an isolated git worktree at ~/ptype/repos/<repo>-<hash> on branch typecode/<slug> when a real repo is opened. The original checkout is untouched.
+- Commands are detected from the repo (npm/pnpm/yarn/bun, Cargo, Go, Python, Make, just, Gradle/Maven) and stored per project: install, test, build, lint, dev.
 - Request result_path is required and is distinct from the workspace.
-- The agent is confined to the workspace; absolute paths and .. are rejected.
-- run is one allowlisted program and its arguments, no shell operators, 20s timeout.
-- web_search and academic_search are the designated network tools; queries leave the machine. Never send secrets or private code.
-- Allowed: node, python3, python, pwd, ls, cat, head, tail, wc, grep, echo, mkdir, touch, git, sort, uniq, find, printf, sed, awk, true.
-- Python gate: python3 -m compileall -q . and pytest -q when tests/ exists.
-- JS gate: node --check.
-- LSP errors also reject. A tester Pip may review.
+- File tools are confined to the workspace; the shell starts there but is a full shell and can reach the rest of the machine.
+- run is a full shell: pipes, &&, package managers, git, builds and tests work. Default timeout 120s. Irreversible system commands (sudo, rm -rf /, disk erase, shutdown) are blocked.
+- web_search and academic_search are the designated network search tools; queries leave the machine. Never send secrets or private code.
+- Gate: the repository's own test command first. Without one, Python uses python3 -m compileall -q . plus pytest -q when tests/ exists; JavaScript uses node --check.
+- LSP errors also reject.
 - Only a passing request is committed and copied to result_path.
-- Worker: 12 steps per attempt, 3 attempts, 20 history entries, 180s model timeout. Talk: 12 steps. Research: 24 steps with a 10-step search budget.
+- Worker: 40 steps per attempt, 5 attempts, 40 history entries by default (PTYPE_MAX_STEPS / PTYPE_MAX_ATTEMPTS / PTYPE_HISTORY). At the step ceiling it checkpoints and the next run resumes. Talk: 12 steps. Research: 24 steps with a 10-step search budget.
+- serve starts a background dev server and opens its localhost URL; serve_stop stops it. Do not run a dev server inside run.
 
 ## Worker JSON tool names
 
-write_files, write_file, read_file, list_dir, run, web_search, diagnostics,
-definition, references, symbols, hover, remember, test, finish.
+write_files, write_file, read_file, list_dir, run, serve, serve_stop, checkpoint,
+web_search, diagnostics, definition, references, symbols, hover, remember,
+test, finish, mcp__<server>__<tool>.
 
 ## Research mode (Talk)
 

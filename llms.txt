@@ -6,7 +6,7 @@
 
 - [Typecode](https://ptype.app/typecode): the product, what it does, Tachyon, typecode.local and the plans.
 - [Autonomy](https://ptype.app/autonomy): the three modes, the policy that steers the loop, and where it stops.
-- [Docs](https://ptype.app/docs): complete manual for Typecode and ptype: install, concepts, Talk and Research mode, agents, verification, Pips, plugins, models, thinking, MCP, LSP, memory, RAG, background, Tachyon, API, security, development.
+- [Docs](https://ptype.app/docs): complete manual for Typecode and ptype: install, concepts, Talk and Research mode, agents, skills, verification, plugins, models, thinking, MCP, LSP, memory, RAG, background, Tachyon, API, security, development.
 - [For agents](https://ptype.app/foragents): machine-oriented reference with the MCP endpoint, complete tool table, HTTP routes, workspace/run contract, LSP, memory and safety limits.
 - [Agent plain text](https://ptype.app/foragents.txt): condensed text reference.
 - [Downloads](https://ptype.app/downloads): macOS arm64/Intel, Windows x64, Linux x64/arm64.
@@ -31,7 +31,7 @@
 - web_search and academic_search are the network tools; results/abstracts are untrusted. Never send secrets.
 - Settings → Integrations exports .md reports to an Obsidian vault or creates a Notion child page. Notion requires a local integration token; report content leaves the machine only on Notion export.
 - Research mode writes one .md report with every source (default ~/ptype/research/<slug>-YYYY-MM-DD-HHMM.md); DOIs are resolved via Crossref/OpenAlex; academic-only filters the Sources section to scholarly material.
-- A written file is not success: compileall/pytest, node --check, LSP errors and the tester gate.
+- A written file is not success: compileall/pytest, node --check, LSP errors and the final verification gate.
 - Failed work is not committed or copied.
 - Memory scopes: global/project/agent; levels: nobot=read, subbot=read/write/create, superbot=+delete.
 - No per-session todo; the sidebar's Todo is open project requests.
