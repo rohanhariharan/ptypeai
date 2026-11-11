@@ -1,15 +1,77 @@
 {
   "product": "Typecode",
-  "latest": "v3.0.0",
-  "version": "3.0.0",
-  "published": "2026-11-06T03:57:39.016Z",
-  "macos_arm64": "/downloads/v3.0.0/Typecode_3.0.0_aarch64.dmg",
-  "macos_x64": "/downloads/v3.0.0/Typecode_3.0.0_x64.dmg",
-  "windows_x64": "/downloads/v3.0.0/Typecode_3.0.0_x64-setup.exe",
+  "latest": "v4.0.0",
+  "version": "4.0.0",
+  "published": "2026-11-11T14:06:33.471Z",
+  "macos_arm64": "/downloads/v4.0.0/Typecode_4.0.0_aarch64.dmg",
+  "macos_x64": "/downloads/v4.0.0/Typecode_4.0.0_x64.dmg",
+  "windows_x64": "/downloads/v4.0.0/Typecode_4.0.0_x64-setup.exe",
   "windows_arm64": "",
-  "linux_x64": "/downloads/v3.0.0/Typecode_3.0.0_amd64.deb",
-  "linux_arm64": "/downloads/v3.0.0/Typecode_3.0.0_arm64.deb",
+  "linux_x64": "/downloads/v4.0.0/Typecode_4.0.0_amd64.deb",
+  "linux_arm64": "/downloads/v4.0.0/Typecode_4.0.0_arm64.deb",
   "releases": [
+    {
+      "tag": "v4.0.0",
+      "date": "2026-11-11T14:06:33.471Z",
+      "assets": [
+        {
+          "name": "Typecode_4.0.0_aarch64.dmg",
+          "os": "macOS",
+          "arch": "Apple silicon",
+          "size": 48421988,
+          "url": "/downloads/v4.0.0/Typecode_4.0.0_aarch64.dmg"
+        },
+        {
+          "name": "Typecode_4.0.0_x64.dmg",
+          "os": "macOS",
+          "arch": "Intel",
+          "size": 49478693,
+          "url": "/downloads/v4.0.0/Typecode_4.0.0_x64.dmg"
+        },
+        {
+          "name": "Typecode_4.0.0_x64_en-US.msi",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 43397120,
+          "url": "/downloads/v4.0.0/Typecode_4.0.0_x64_en-US.msi"
+        },
+        {
+          "name": "Typecode_4.0.0_x64-setup.exe",
+          "os": "Windows",
+          "arch": "x64",
+          "size": 30120075,
+          "url": "/downloads/v4.0.0/Typecode_4.0.0_x64-setup.exe"
+        },
+        {
+          "name": "Typecode_4.0.0_arm64.deb",
+          "os": "Linux",
+          "arch": "arm64",
+          "size": 53554928,
+          "url": "/downloads/v4.0.0/Typecode_4.0.0_arm64.deb"
+        },
+        {
+          "name": "Typecode-4.0.0-1.aarch64.rpm",
+          "os": "Linux",
+          "arch": "arm64",
+          "size": 53554008,
+          "url": "/downloads/v4.0.0/Typecode-4.0.0-1.aarch64.rpm"
+        },
+        {
+          "name": "Typecode_4.0.0_amd64.deb",
+          "os": "Linux",
+          "arch": "x64",
+          "size": 53561742,
+          "url": "/downloads/v4.0.0/Typecode_4.0.0_amd64.deb"
+        },
+        {
+          "name": "Typecode-4.0.0-1.x86_64.rpm",
+          "os": "Linux",
+          "arch": "x64",
+          "size": 53554625,
+          "url": "/downloads/v4.0.0/Typecode-4.0.0-1.x86_64.rpm"
+        }
+      ]
+    },
     {
       "tag": "v3.0.0",
       "date": "2026-11-06T03:57:39.016Z",
